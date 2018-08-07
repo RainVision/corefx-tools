@@ -833,7 +833,7 @@ InstallPerf_Debian()
 	EnsureRoot
 
 	# Install zip and perf.
-	apt-get install zip linux-tools binutils
+	apt-get install -y zip linux-tools binutils
 }
 
 IsSUSE()
@@ -880,7 +880,7 @@ InstallPerf_Ubuntu()
 	BlueText
 	echo "Installing perf_event packages."
 	ResetText
-	apt-get install linux-tools-common linux-tools-`uname -r` linux-cloud-tools-`uname -r` zip software-properties-common
+	apt-get install -y linux-tools-common linux-tools-`uname -r` linux-cloud-tools-`uname -r` zip software-properties-common
 }
 
 InstallPerf()
@@ -944,7 +944,7 @@ InstallLTTng_Debian()
 	EnsureRoot
 
 	# Install LTTng
-	apt-get install lttng-tools liblttng-ust-dev
+	apt-get install -y lttng-tools liblttng-ust-dev
 }
 
 InstallLTTng_SUSE()
@@ -1010,7 +1010,7 @@ InstallLTTng_Ubuntu()
 	BlueText
 	echo "Installing LTTng packages."
 	ResetText
-	apt-get install lttng-tools lttng-modules-dkms liblttng-ust0
+	apt-get install -y lttng-tools lttng-modules-dkms liblttng-ust0
 }
 
 InstallLTTng()
